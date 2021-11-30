@@ -1,0 +1,38 @@
+.content{
+	min-height: 600px;
+}
+tr.even{
+	background-color: #efefef;
+}
+tr.hover{
+	background-color: #c3e695;
+}
+.home-content{
+	margin-top: 50px !important;
+}
+div{
+	text-align: center;
+}
+th{
+	text-align: center;
+}
+td{
+	text-align: center;
+}
+.bd-margin-top{
+	margin-top: 20;
+}
+.tb-max-width{
+	width: inherit;
+}
+.tb-list{
+	text-align: center;
+	width: 150;
+}
+/* body{
+	background-color: black;
+} */
+.cd-center{
+	width:30rem;
+	margin:auto;
+}

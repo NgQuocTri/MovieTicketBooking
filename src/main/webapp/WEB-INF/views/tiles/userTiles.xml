@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration
+3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="user-base-definition"
+		template="/WEB-INF/views/tiles/layouts/userLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/user/header.jsp" />
+		<put-attribute name="menu"
+			value="/WEB-INF/views/tiles/template/user/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/user/footer.jsp" />
+	</definition>
+
+	<definition name="user-base-definition-book"
+		template="/WEB-INF/views/tiles/layouts/userLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/template/user/header.jsp" />
+		<!-- <put-attribute name="menu" value="/WEB-INF/views/tiles/template/user/menu.jsp" 
+			/> -->
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/template/user/footer.jsp" />
+	</definition>
+
+	<!-- Home Page -->
+	<definition name="user-home" extends="user-base-definition">
+		<put-attribute name="title" value="Trang chủ" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/home.jsp" />
+	</definition>
+
+	<definition name="user-movieByCalendar"	extends="user-base-definition">
+		<put-attribute name="title" value="Danh sách phim" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/movieByCalendar.jsp" />
+	</definition>
+
+	<definition name="user-movieByAge" extends="user-base-definition">
+		<put-attribute name="title" value="Danh sách phim" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/movieByAge.jsp" />
+	</definition>
+
+	<definition name="user-ticketPrice"	extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé" />
+		<put-attribute name="body"	value="/WEB-INF/views/user/ticketPrice.jsp" />
+	</definition>
+
+	<definition name="user-movie-detail" extends="user-base-definition">
+		<put-attribute name="title" value="welcome"/>
+		<put-attribute name="body"	value="/WEB-INF/views/user/movie-detail.jsp" />
+	</definition>
+
+	<definition name="user-movieList" extends="user-base-definition">
+		<put-attribute name="title" value="Danh sách phim"/>
+		<put-attribute name="body"	value="/WEB-INF/views/user/movieList.jsp" />
+	</definition>
+	
+	<definition name="user-searchMovie" extends="user-base-definition">
+		<put-attribute name="title" value="Danh sách phim"/>
+		<put-attribute name="body"	value="/WEB-INF/views/user/searchMovie.jsp" />
+	</definition>
+
+	<definition name="user-movieByGenre" extends="user-base-definition">
+		<put-attribute name="title" value="Danh sách phim" />
+		<put-attribute name="body" value="/WEB-INF/views/user/moviesByGenre.jsp" />
+	</definition>
+
+	<definition name="user-bookedTicket"
+		extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/user/shop/bookedTicket.jsp" />
+	</definition>
+
+	<definition name="user-viewBookedTicket" extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé" />
+		<put-attribute name="body" value="/WEB-INF/views/user/shop/viewBookedTicket.jsp" />
+	</definition>
+	<definition name="user-getDate"	extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé" />
+		<!-- <put-attribute name="menu" value=""/> -->
+		<put-attribute name="body" value="/WEB-INF/views/user/shop/getDate.jsp" />
+	</definition>
+
+	<definition name="user-getHour" extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé" />
+		<put-attribute name="body" value="/WEB-INF/views/user/shop/getHour.jsp" />
+	</definition>
+	
+	<definition name="user-movieByGenre" extends="user-base-definition">
+		<put-attribute name="title" value="Danh sách phim"/>
+		<put-attribute name="body" value="/WEB-INF/views/user/moviesByGenre.jsp"/>
+	</definition>
+	
+	<definition name="shop-shoppingCart" extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé"/>
+		<put-attribute name="body" value="/WEB-INF/views/user/shop/shoppingCart.jsp"/>
+	</definition>
+	
+	<definition name="user-checkout" extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé"/>
+		<put-attribute name="body" value="/WEB-INF/views/user/shop/checkout.jsp"/>
+	</definition>
+	
+	<definition name="user-customerService" extends="user-base-definition">
+		<put-attribute name="title" value="Hỗ trợ khách hàng"/>
+		<put-attribute name="body" value="/WEB-INF/views/user/customerService.jsp"/>
+	</definition>
+	
+	<definition name="shop-shoppingCartConfirmation" extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé"/>
+		<put-attribute name="body" value="/WEB-INF/views/user/shop/shoppingCartConfirmation.jsp"/>
+	</definition>
+	
+	<definition name="shop-shoppingCartConfirmationUser" extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé"/>
+		<put-attribute name="body" value="/WEB-INF/views/user/shop/shoppingCartConfirmationUser.jsp"/>
+	</definition>
+	
+	<definition name="shop-shoppingCartFinalize" extends="user-base-definition">
+		<put-attribute name="title" value="Đặt vé"/>
+		<put-attribute name="body" value="/WEB-INF/views/user/shop/shoppingCartFinalize.jsp"/>
+	</definition>
+	
+	<!-- User profile -->
+	<definition name="user-userProfile" extends="user-base-definition">
+		<put-attribute name="body" value="/WEB-INF/views/user/userProfile.jsp"/>
+	</definition>
+	
+	<definition name="user-editUser" extends="user-base-definition">
+		<put-attribute name="body" value="/WEB-INF/views/user/user-editUser.jsp"/>
+	</definition>
+	
+	<!-- Order history -->
+	<definition name="user-orderHistory" extends="user-base-definition">
+		<put-attribute name="body" value="/WEB-INF/views/user/orderHistory.jsp"/>
+	</definition>
+	
+	<definition name="user-orderDetailList" extends="user-base-definition">
+		<put-attribute name="body" value="/WEB-INF/views/user/orderDetailList.jsp"/>
+	</definition>
+	
+	<!-- changePassword Page -->
+	<definition name="user-changePassword" extends="user-base-definition">
+		<put-attribute name="title" value="Thay đổi mật khẩu" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/changePassword.jsp" />
+	</definition>
+	
+	
+</tiles-definitions>

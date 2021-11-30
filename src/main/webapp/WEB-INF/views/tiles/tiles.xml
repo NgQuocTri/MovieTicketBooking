@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration
+3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition" template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+		<put-attribute name="title" value="Đăng nhập" />
+		<put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/views/tiles/template/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+	</definition>
+	
+	<!-- Home Page -->
+	<definition name="userList" extends="base-definition">
+		<put-attribute name="title" value="Danh sách người dùng" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/userList.jsp" />
+	</definition>
+	
+	<!-- User -->
+	<definition name="newUser" extends="base-definition">
+		<put-attribute name="title" value="Tạo mới" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/newUser.jsp" />
+	</definition>
+	
+	<definition name="editUser" extends="base-definition">
+		<put-attribute name="title" value="Chỉnh sửa thông tin người dùng" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/editUser.jsp" />
+	</definition>
+	
+	<definition name="viewUser" extends="base-definition">
+		<put-attribute name="title" value="Thông tin người dùng" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/viewUser.jsp" />
+	</definition>
+	
+	<definition name="admin-userProfile" extends="base-definition">
+		<put-attribute name="title" value="Thông tin cá nhân" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/userProfile.jsp" />
+	</definition>
+	
+	<definition name="admin-changePassword" extends="base-definition">
+		<put-attribute name="title" value="Thông tin cá nhân" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/user/changePassword.jsp" />
+	</definition>
+	<!-- login Page -->
+	<definition name="login" extends="base-definition">
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="body" value="/WEB-INF/views/user/login.jsp" />
+	</definition>
+	
+	<definition name="register" extends="base-definition">
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="title" value="Đăng kí tài khoản" />
+		<put-attribute name="body" value="/WEB-INF/views/user/register.jsp"/>
+	</definition>
+	
+	<!-- forgotPassword Page -->
+	<definition name="forgotPassword" extends="base-definition">
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="title" value="Quên mật khẩu" />
+		<put-attribute name="body" value="/WEB-INF/views/forgotPassword/forgotPassword.jsp" />
+	</definition>
+	<definition name="changePassword" extends="base-definition">
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="title" value="Thay đổi mật khẩu" />
+		<put-attribute name="body" value="/WEB-INF/views/forgotPassword/changePassword.jsp" />
+	</definition>
+	<definition name="changePasswordError" extends="base-definition">
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="title" value="Thay đổi mật khẩu thất bại" />
+		<put-attribute name="body" value="/WEB-INF/views/forgotPassword/changePasswordError.jsp" />
+	</definition>
+	<definition name="changePasswordSuccess" extends="base-definition">
+		<put-attribute name="header" value=""/>
+		<put-attribute name="menu" value=""/>
+		<put-attribute name="title" value="Thay đổi mật khẩu thành công" />
+		<put-attribute name="body" value="/WEB-INF/views/forgotPassword/changePasswordSuccess.jsp" />
+	</definition>
+	
+	<!-- Order -->
+	<definition name="listOrder" extends="base-definition">
+		<put-attribute name="title" value="Danh sách đơn hàng" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/order/listOrder.jsp" />
+	</definition>
+	
+	<definition name="detailOrder" extends="base-definition">
+		<put-attribute name="title" value="Chi tiết đơn hàng" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/order/detailOrder.jsp" />
+	</definition>
+	
+	<!-- Movie -->
+	<definition name="movieList" extends="base-definition">
+		<put-attribute name="title" value="Danh sách phim" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/movie/movieList.jsp" />
+	</definition>
+	
+	<definition name="editMovie" extends="base-definition">
+		<put-attribute name="title" value="Chỉnh sửa Phim" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/movie/editMovie.jsp" />
+	</definition>
+	
+	<definition name="newMovie" extends="base-definition">
+		<put-attribute name="title" value="Tạo mới Phim" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/movie/newMovie.jsp" />
+	</definition>
+	
+	<definition name="movieDetail" extends="base-definition">
+		<put-attribute name="title" value="Chi tiết Phim" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/movie/movieDetail.jsp" />
+	</definition>
+	
+	<!-- Schedule -->
+	<definition name="scheduleList" extends="base-definition">
+		<put-attribute name="title" value="Danh sách lịch chiếu" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/schedule/scheduleList.jsp"/>
+	</definition>
+	
+	<definition name="newSchedule" extends="base-definition">
+	 	<put-attribute name="title" value="Tạo mới lịch chiếu" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/schedule/newSchedule.jsp"/>
+	</definition>
+	
+	<!-- Poster -->
+	<definition name="admin-posterList" extends="base-definition">
+		<put-attribute name="title" value="Danh sách áp phích" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/poster/posterList.jsp"/>
+	</definition>
+	
+	<definition name="admin-newPoster" extends="base-definition">
+	<put-attribute name="title" value="Tạo mới áp phích" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/poster/newPoster.jsp"/>
+	</definition>
+	
+	<!-- Ticket -->
+	<definition name="listTicket" extends="base-definition">
+		<put-attribute name="title" value="Danh sách vé phim" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/ticket/listTicket.jsp" />
+	</definition>
+		
+	<definition name="detailTicket" extends="base-definition">
+		<put-attribute name="title" value="Chi tiết vé phim" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/ticket/detailTicket.jsp" />
+	</definition>
+	
+	<!-- Price -->
+	<definition name="priceList" extends="base-definition">
+		<put-attribute name="title" value="Danh sách giá vé" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/price/priceList.jsp"/>
+	</definition>
+	
+	<definition name="newPrice" extends="base-definition">
+		<put-attribute name="title" value="Tạo với giá vé" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/price/newPrice.jsp"/>
+	</definition>
+	
+	<definition name="editPrice" extends="base-definition">
+		<put-attribute name="title" value="Chỉnh sửa giá vé" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/price/editPrice.jsp"/>
+	</definition>
+	
+	<!-- Customer -->
+	<definition name="admin-customerList" extends="base-definition">
+		<put-attribute name="title" value="Danh sách khách hàng" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/customer/customerList.jsp"/>
+	</definition>
+	<definition name="admin-editCustomer" extends="base-definition">
+		<put-attribute name="title" value="Chỉnh sửa thông tin khách hàng" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/customer/editCustomer.jsp"/>
+	</definition>
+	
+	<!-- Feedback -->
+	<definition name="admin-feedbackList" extends="base-definition">
+		<put-attribute name="title" value="Danh sách phản hồi" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/feedback/feedbackList.jsp"/>
+	</definition>
+	
+	<!-- Discount -->
+	<definition name="newDiscount" extends="base-definition">
+		<put-attribute name="title" value="Thêm giảm giá" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/discount/newDiscount.jsp" />
+	</definition>
+	
+	<definition name="discountList" extends="base-definition">
+		<put-attribute name="title" value="Danh sách giảm giá" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/discount/discountList.jsp" />
+	</definition>
+	
+	<definition name="editDiscount" extends="base-definition">
+		<put-attribute name="title" value="Chỉnh sửa thông tin giảm giá" />
+		<put-attribute name="body" value="/WEB-INF/views/admin/discount/editDiscount.jsp" />
+	</definition>
+	
+	
+	
+	
+</tiles-definitions>
